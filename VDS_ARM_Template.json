@@ -1,0 +1,39 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {},
+    "functions": [],
+    "variables": {
+        "vmName": "SessionPAB"
+    },
+    "resources": [
+        {
+            "apiVersion": "2021-03-01",
+            "type": "Microsoft.Compute/virtualMachines/extensions",
+            "name": "SessionPAB/ScriptsTest",
+            "location": "[resourceGroup().location]",
+            "dependsOn": ["[concat('Microsoft.Compute/virtualMachines/', variables('vmName'))]"],
+            "tags": {
+                "displayName": "ScriptsTest"
+            },
+            "properties": {
+                "publisher": "Microsoft.Compute",
+                "type": "CustomScriptExtension",
+                "typeHandlerVersion": "1.10",
+                "autoUpgradeMinorVersion": true,
+                "settings": {
+                    "commandToExecute": "powershell.exe -ExecutionPolicy Bypass -file RabbitMQConfig.ps1"
+                },
+                "protectedSettings": {
+                    "storageAccountName": "ahccippmsewesteuro2661",
+                    "storageAccountKey": "tozp9HiMt9BLvZ6nWLHKCtOUD4EBxG5wmcbWvl/thrQr6aKQJ/bp4aRFOY4JaDaKu1asEtEBKJwV6tA2HqOdKQ==",
+                    "managedIdentity" : {},
+                    "fileUris": [
+                        "https://ahccippmsewesteuro2661.blob.core.windows.net/vds-test/RabbitMQConfig.ps1"
+                    ]
+                }
+            }
+        }
+    ],
+    "outputs": {}
+}
