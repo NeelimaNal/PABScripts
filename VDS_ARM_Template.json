@@ -12,7 +12,6 @@
             "type": "Microsoft.Compute/virtualMachines/extensions",
             "name": "SessionPAB/ScriptsTest",
             "location": "[resourceGroup().location]",
-            "dependsOn": ["[concat('Microsoft.Compute/virtualMachines/', variables('vmName'))]"],
             "tags": {
                 "displayName": "ScriptsTest"
             },
