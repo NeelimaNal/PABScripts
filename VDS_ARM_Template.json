@@ -7,6 +7,7 @@
     "resources": [
         {
             "apiVersion": "2021-03-01",
+            "name": "PABOctSes1-0/ScriptsTest",
             "type": "Microsoft.Compute/virtualMachines/extensions",
             "location": "[resourceGroup().location]",
             "tags": {
