@@ -3,14 +3,12 @@
     "contentVersion": "1.0.0.0",
     "parameters": {},
     "functions": [],
-    "variables": {
-        "vmName": "SessionPAB"
-    },
+    "variables": {},
     "resources": [
         {
             "apiVersion": "2021-03-01",
             "type": "Microsoft.Compute/virtualMachines/extensions",
-            "name": "SessionPAB/ScriptsTest",
+            "name": "SessionPAB-0/ScriptsTest",
             "location": "[resourceGroup().location]",
             "tags": {
                 "displayName": "ScriptsTest"
