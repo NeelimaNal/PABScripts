@@ -8,7 +8,6 @@
         {
             "apiVersion": "2021-03-01",
             "type": "Microsoft.Compute/virtualMachines/extensions",
-            "name": "SessionPAB-0/ScriptsTest",
             "location": "[resourceGroup().location]",
             "tags": {
                 "displayName": "ScriptsTest"
