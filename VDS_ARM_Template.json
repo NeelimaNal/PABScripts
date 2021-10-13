@@ -7,11 +7,11 @@
     "resources": [
         {
             "apiVersion": "2021-03-01",
-            "name": "PABOctSes1-0/ScriptsTest",
+            "name": "PABOctSes1-0/ScriptsTest1",
             "type": "Microsoft.Compute/virtualMachines/extensions",
             "location": "[resourceGroup().location]",
             "tags": {
-                "displayName": "ScriptsTest"
+                "displayName": "ScriptsTest1"
             },
             "properties": {
                 "publisher": "Microsoft.Compute",
@@ -22,10 +22,10 @@
                     "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File RabbitMQConfig.ps1"
                 },
                 "protectedSettings": {
-                    "storageAccountName": "ahccippmsewesteuro2661",
-                    "storageAccountKey": "tozp9HiMt9BLvZ6nWLHKCtOUD4EBxG5wmcbWvl/thrQr6aKQJ/bp4aRFOY4JaDaKu1asEtEBKJwV6tA2HqOdKQ==",
+                    "storageAccountName": "pabscriptstrainingoct",
+                    "storageAccountKey": "9IvAjZQXIpNjT7z75tHsSMEQjgmtP9uNBQewkD9Yu+V+HX2RXcjIEJXDLFEgYBaTC2HsUrhjos+0sllmrACe4Q==",
                     "fileUris": [
-                        "https://ahccippmsewesteuro2661.blob.core.windows.net/vds-test/RabbitMQConfig.ps1"
+                        "https://pabscriptstrainingoct.blob.core.windows.net/vdsscripts/RabbitMQConfig.ps1"
                     ]
                 }
             }
