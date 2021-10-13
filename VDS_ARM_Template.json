@@ -24,7 +24,6 @@
                 "protectedSettings": {
                     "storageAccountName": "ahccippmsewesteuro2661",
                     "storageAccountKey": "tozp9HiMt9BLvZ6nWLHKCtOUD4EBxG5wmcbWvl/thrQr6aKQJ/bp4aRFOY4JaDaKu1asEtEBKJwV6tA2HqOdKQ==",
-                    "managedIdentity" : {},
                     "fileUris": [
                         "https://ahccippmsewesteuro2661.blob.core.windows.net/vds-test/RabbitMQConfig.ps1"
                     ]
