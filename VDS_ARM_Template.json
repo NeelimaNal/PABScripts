@@ -19,7 +19,7 @@
                 "typeHandlerVersion": "1.10",
                 "autoUpgradeMinorVersion": true,
                 "settings": {
-                    "commandToExecute": "powershell.exe -ExecutionPolicy Bypass -file RabbitMQConfig.ps1"
+                    "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File RabbitMQConfig.ps1"
                 },
                 "protectedSettings": {
                     "storageAccountName": "ahccippmsewesteuro2661",
