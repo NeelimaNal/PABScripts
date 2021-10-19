@@ -7,7 +7,7 @@
     "resources": [
         {
             "apiVersion": "2021-03-01",
-            "name": "PABOctSes2-0/ScriptsTest1",
+            "name": "test/ScriptsTest1",
             "type": "Microsoft.Compute/virtualMachines/extensions",
             "location": "[resourceGroup().location]",
             "tags": {
@@ -19,12 +19,20 @@
                 "typeHandlerVersion": "1.10",
                 "autoUpgradeMinorVersion": true,
                 "settings": {
-                    "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File RabbitMQConfig.ps1"
+                    "commandToExecute": "powershell.exe -ExecutionPolicy ByPass -File ConfigureSSL.ps1 &
+                 powershell.exe -ExecutionPolicy Bypass -File EncryptSPFConnectionStrings.ps1 & 
+                    powershell.exe -ExecutionPolicy Bypass -File ReconfigureSAM.ps1 &
+                     powershell.exe -ExecutionPolicy Bypass -File ReconfigureSDxVM.ps1 & 
+                     powershell.exe -ExecutionPolicy Bypass -File RabbitMQConfig.ps1 "
                 },
                 "protectedSettings": {
                     "storageAccountName": "pabscriptstrainingoct",
                     "storageAccountKey": "9IvAjZQXIpNjT7z75tHsSMEQjgmtP9uNBQewkD9Yu+V+HX2RXcjIEJXDLFEgYBaTC2HsUrhjos+0sllmrACe4Q==",
                     "fileUris": [
+                        "https://pabscriptstrainingoct.blob.core.windows.net/vdsscripts/ConfigureSSL.ps1",
+                        "https://pabscriptstrainingoct.blob.core.windows.net/vdsscripts/EncryptSPFConnectionStrings.ps1",
+                        "https://pabscriptstrainingoct.blob.core.windows.net/vdsscripts/ReconfigureSAM.ps1",
+                        "https://pabscriptstrainingoct.blob.core.windows.net/vdsscripts/ReconfigureSDxVM.ps1",
                         "https://pabscriptstrainingoct.blob.core.windows.net/vdsscripts/RabbitMQConfig.ps1"
                     ]
                 }
